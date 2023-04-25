@@ -2,7 +2,7 @@
 
 /*
  Paleta de Cores
- verde: #49a09d
+ gray claro: rgba(211, 208, 208, 0.844)
  cinza: rgb(77, 77, 77);
 */
 
@@ -29,7 +29,6 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     overflow: hidden;
 
     background-color: white;
@@ -37,6 +36,10 @@ section#login{
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    
+    transition: width .5s, height .5s;
+    transition-timing-function:ease ;
+    transform: translate(-50%,-50%);
 
 
 }
@@ -52,4 +55,98 @@ section#login div#imagem{
 section#login div#formulario{
     display: block;
     padding: 10px;
+}
+
+div#formulario h1{
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+div#formulario p{
+    font-size: 1em;
+    margin: 20px 0px;
+
+}
+
+form div.campo{
+    background-color: rgb(77, 77, 77);
+    border: 2px solid rgb(77, 77, 77) ;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 9px;
+    margin: 5px 0px;
+
+}
+
+div.campo label{
+    display: none;
+    
+}
+
+div.campo i{
+    color: white;
+    background-color: black;
+    font-size: 2em;
+    width: 40px;
+    padding: 3px;
+    border-radius: 9px;
+
+}
+
+div.campo input{
+    background-color: rgba(211, 208, 208, 0.844);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;    
+    border: 0px;
+    border-radius: 8px;
+    transform: translateY(-10px);
+    
+}
+
+div.campo input:focus-within{
+    background-color: white;
+}
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover{
+    background-color: rgb(77, 77, 77);
+
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: darkorange;
+    color: white;
+    border: solid gray;
+    border-radius: 7px;
+    text-decoration: none;
+
+}
+
+form > a.botao >i{
+    font-size: 0.8em;
+}
+
+form > a.botao:hover{
+    background-color: rgb(77, 77, 77);
+
 }
